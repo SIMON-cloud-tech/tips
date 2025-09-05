@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips Caffe Hotel</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="video-container">
+<video id="bgVideo" autoplay muted loop playsinline></video>
+</div>
+<div class="content">
+<section class="background">
+<div class="navbar">
+<div class="logo">Tips Caffe</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<ul class="navLinks">
+<li><a href="#">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="reward.html">Rewards</a></li>
+<li><a href="about.html">About us</a></li>
+<li><a href="contact.html">Contact us</a></li>
+</ul>
+</div>
+<div class="homepage">
+<h2>Delicious Meals for Bright Minds in MMUST</h2>
+<p>Eat at affordable prices in our hotel to your fill</p>
+<h4>We believe nutrition is the way to wellness</h4>
+<button onclick="orderViaWhatsApp" class="order">Order</button>
+<button class="order">Menu</button>
+</div>
+</section>
+<hr class="section-divider">
+
+
+  <!----Contacts section-->
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or feedback? Send us a message directly via WhatsApp.</p>
+    <div class="contact-container">
+      <div class="address">
+        <p>Call this numbers or WhatsApp them for directions to our hotel</p>
+        <ul>
+          <li><b>Phone: </b>+254 7xx xxx xxx</li>
+          <li><b>WhatsAp: </b>+254 7xx xxx xxx</li>
+          <li><b>Location: </b>Lurambi roundabout along Sichirayi road</li>
+        </ul>
+      </div>
+      <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-----Contacts section-->
+
+  <!------Did you know section-->
+  <div class="foodie">
+  <section id="foodFact">
+    <h2>🥦 Did You Know?</h2>
+    <p id="factText">Loading food wisdom...</p>
+
+    <div class="buttons">
+      <button onclick="showPreviousFact()" class="prev">⏪ Previous Tip</button>
+      <button onclick="showRandomFact()" class="randomFact">🎲 Surprise Me</button>
+      <button onclick="shareOnWhatsApp()" class="share">📤 Share on WhatsApp</button>
+    </div>
+  </section>
+  </div>
+<!----Did you know section-->
+  <!-------Footer information----->
+  <section class="footer">
+    <h4 class="menubars"><a href="contact.html">Contacts</a> || <a href="menu.html">Our Menu</a> || <a
+        href="index.html">Home</a> || <a href="reward.html">Rewards</a></h4>
+    <p>&copy; Built with precision & Industrial Chemistry Hygiene standards</p>
+    <!--------Footer information----->
+  </section>
+</div>
+<script src="script.js"></script>
+<script src="loyal.js"></script>
+</body>
+</html>

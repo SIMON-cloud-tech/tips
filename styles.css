@@ -1,0 +1,472 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.video-container{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+video{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/*Navbar stylings*/
+.content{
+width: 100vw;
+height: 100vh;
+margin: 0;
+top: 0;
+left: 0;
+right: 0;
+position: relative;
+}
+.background{
+margin: 0;
+}
+.navbar{
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.6);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 30px;
+z-index: 10;
+}
+.logo{
+font-size: 30px;
+font-weight: lighter;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-style: italic;
+color: red;
+margin-left: 2rem;
+}
+.menu-icon{
+font-size: 16px;
+color:white;
+font-weight: bold;
+margin: 1rem;
+border: none;
+outline: none;
+background-color: transparent;
+cursor: pointer;
+display: none;
+}
+.navLinks{
+display: flex;
+margin-right: 2rem;
+}
+.navLinks li{
+padding: 10px;
+list-style: none;
+}
+.navLinks li a{
+text-decoration: none;
+color: white;
+}
+.homepage{
+color: orange;
+text-align: center;
+margin-top: 10%;
+font-style: italic;
+font-weight: bolder;
+padding: 10px 20px;
+}
+.homepage p{
+    color: green;
+    font-size: 20px;
+}
+.homepage h4{
+    color: orangered;
+    font-size: 20px;
+}
+.order{
+background-color: #ff4400e1;
+padding: 10px 20px;
+font-weight: bold;
+margin: 1rem;
+color: white;
+border: none;
+outline: none;
+border-radius: 3px;
+cursor: pointer;
+}
+.order:hover{
+background-color: darkred;
+transition: 0.5s;
+}
+/*menu section*/
+.menu-section {
+padding: 40px 20px;
+background-color: rgba(0, 0, 0, 0.342);
+text-align: center;
+}
+.search-bar input {
+width: 80%;
+padding: 10px;
+font-size: 1em;
+border: 1px solid #ccc;
+background-color: transparent;
+border-radius: 5px;
+margin-bottom: 30px;
+color: white;
+}
+.tabs {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.tabs button {
+padding: 10px 20px;
+border: none;
+background: #ff5722;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.tabs button.active {
+background: #e64a19;
+}
+
+.card-container {
+display: flex;
+overflow-x: auto;
+align-items: center;
+justify-content: center;
+scroll-behavior: smooth;
+gap: 20px;
+padding: 10px;
+}
+.card {
+width: 250px;
+height: auto;
+background: rgba(255, 255, 255, 0);
+border-radius: 10px;
+box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.364);
+padding: 15px;
+position: relative;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.card img {
+width: 100%;
+border-radius: 10px;
+border-top-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.card h3 {
+margin: 10px 0 5px;
+}
+
+.card p {
+color: #555;
+}
+
+.add-cart {
+display: none;
+position: absolute;
+bottom: 15px;
+left: 50%;
+transform: translateX(-50%);
+background: #4caf50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.card.clicked .add-cart {
+display: block;
+} 
+
+/*Loyalty system*/
+
+.loyalty-section{
+    margin-top: 1em;
+    background-color: transparent;
+    padding: 10px 20px;
+    text-align: center;
+}
+.loyalty-section h1{
+    padding: 5px 10px;
+}
+.loyalty-section p{
+    margin: 0.5rem;
+    padding: 5px 10px;
+    text-align: center;
+}
+.stamp-card {
+    max-width: 500px;
+    margin-bottom: 3rem;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.stamp-card button{
+    background-color: #ff5722;
+    padding: 10px 20px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #fdfdfd;
+}
+
+.stamps {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.stamp {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.stamp.filled {
+    background: #4caf50;
+}
+
+#codeEntry input{
+    line-height: 1rem;
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 1px solid;
+    font-weight: 500;
+}
+/*Loyalty system*/
+/*Contacts section*/
+.contact{
+    background-color: transparent;
+}
+.contact h2, p{
+    text-align: center;
+    justify-content: center;
+}
+.contact-container{
+    display:flex;
+    gap: 10px;
+}
+.address{
+    width: 100%;
+    margin-left: 1rem;
+}
+.address ul{
+    display: block;
+}
+.address ul li{
+    padding: 5px 10px;
+    list-style: none;
+}
+#contactForm{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.281);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.342);
+    padding: 5px 10px;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+#contactForm input, textarea{
+    width: 95%;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid;
+}
+#contactForm input{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#contactForm textarea{
+    padding: 5px 10px;
+    height: 100px;
+    border-radius: 5px;
+}
+#contactForm button{
+    width: 95%;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-left: 0.3em;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #ff5722;
+}
+#contactForm button:hover{
+    background-color: #e64a19;
+    transition: 0.6s;
+}
+/*Contacts section ends*/
+/*Did you know section begins*/
+.foodie{
+    background-color: rgba(0, 0, 0, 0.342);
+    padding: 10px 20px;
+}
+#foodFact{
+    margin: 40px auto; 
+    padding: 20px; 
+    background: white;
+    border-left: 6px solid #4caf50; 
+    max-width: 600px; 
+    border-radius: 8px;  
+}
+#foodFact h2{
+    margin-bottom: 10px;
+}
+#factText{
+font-size: 1.1em;
+transition: opacity 0.6s ease;
+}
+.buttons{
+    margin-top: 20px;
+}
+.buttons button{
+    flex: 1;
+}
+.prev{
+    padding: 8px 16px; 
+    background: #607d8b; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    margin-right: 10px;
+}
+.randomFact{
+    padding: 8px 16px; 
+    background: #4caf50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    margin-right: 10px;
+}
+.share{
+    padding: 8px 16px; 
+    background: #25d366; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    margin-right: 10px;
+}
+/*Did you know section*/
+/*Testimonials section*/
+.testimonials{
+    background-color: rgba(0, 0, 0, 0.342);
+    text-align: center;
+    margin-bottom: 0;
+}
+.testimonials h2{
+    padding: 10px 14px;
+}
+.testimonialCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial-card{
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    flex: 1;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.274);
+    flex-direction: column;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 128, 0, 0.575);
+    color: #fff;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px 30px;
+}
+.testimonial-card p{
+    padding: 10px 20px;
+    font-style: italic;
+    color: #fff;
+}
+.testimonial-card h4{
+    padding: 10px 30px;
+}
+.section-divider{
+    color: gold;
+    text-decoration: dotted;
+    border: 2px solid;
+}
+
+/*Testimonials section*/
+/*Footer*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.menubars{
+    text-align: center;
+}
+.menubars a{
+    text-decoration: none;
+    color: darkgreen;
+}
+
+
+
+
+@media screen and (max-width: 580px){
+.navbar ul {
+display: none;
+flex-direction: column;
+position: absolute;
+
+}
+
+.navbar ul.active {
+display: flex;
+color: white;
+background-color:rgba(104, 88, 17, 0.719);
+top: 40px;
+right: 0;
+left: 0;
+text-align: start;
+width: 100%;
+}
+.navbar ul li a{
+color: gainsboro;
+}
+.menu-icon{
+display: block;
+color: white;
+}
+#foodFact{
+    flex: 1;
+}
+.buttons button{
+    padding: 2px;
+    line-height: normal;
+}
+}
