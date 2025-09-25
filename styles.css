@@ -433,6 +433,9 @@ video {
     max-width: 500px;
     width: 90%;
 }
+.footer{
+text-align: center;
+}
 @media screen and (max-width: 580px) {
     .navbar ul {
         display: none;
