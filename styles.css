@@ -278,7 +278,6 @@ video {
     flex: 1;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.274);
     flex-direction: column;
-    margin-bottom: 1rem;
     background-color: rgba(0, 128, 0, 0.575);
     color: #fff;
     border-radius: 5px;
