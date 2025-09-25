@@ -1,101 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tips Caffe Hotel</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tips Caffe Hotel: A premier dining experience at MMUST with a cutting-edge loyalty program. Order affordable, nutritious meals and earn rewards through our innovative Loyalty DNA system.">
+    <meta name="keywords" content="Tips Caffe Hotel, Kenyan restaurant loyalty program, MMUST dining, customer loyalty system, restaurant rewards, hospitality loyalty solutions, eat and earn program">
+    <title>Tips Caffe Hotel - Loyalty DNA</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="video-container">
-<video id="bgVideo" autoplay muted loop playsinline></video>
-</div>
-<div class="content">
-<section class="background">
-<div class="navbar">
-<div class="logo">Tips Caffe</div>
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-<ul class="navLinks">
-<li><a href="#">Home</a></li>
-<li><a href="menu.html">Menu</a></li>
-<li><a href="reward.html">Rewards</a></li>
-<li><a href="about.html">About us</a></li>
-<li><a href="contact.html">Contact us</a></li>
-</ul>
-</div>
-<div class="homepage">
-<h2>Delicious Meals for Bright Minds in MMUST</h2>
-<p>Eat at affordable prices in our hotel to your fill</p>
-<h4>We believe nutrition is the way to wellness</h4>
-<button onclick="orderViaWhatsApp" class="order">Order</button>
-<button class="order">Menu</button>
-</div>
-</section>
-<hr class="section-divider">
-
-  <!---Loyalty system-->
-  <section class="loyalty-section">
-    <h1>Loyalty DNA</h1>
-    <p><b>Explore our loyalty rewarding plans for our esteemed customers</b></p>
-    <div class="stamp-card">
-      <h2>🎯 Eat & Earn Loyalty Program</h2>
-      <p>Log your meals daily and earn a free meal after 7 visits!</p>
-
-      <div class="stamps">
-        <div class="stamp" id="stamp1"></div>
-        <div class="stamp" id="stamp2"></div>
-        <div class="stamp" id="stamp3"></div>
-        <div class="stamp" id="stamp4"></div>
-        <div class="stamp" id="stamp5"></div>
-        <div class="stamp" id="stamp6"></div>
-        <div class="stamp" id="stamp7"></div>
-      </div>
-
-      <button onclick="showCodeEntry()">I Ate Today</button>
-
-      <div id="codeEntry" style="display:none;">
-        <input type="text" id="dailyCode" placeholder="Enter today's code" />
-        <button onclick="verifyCode()">Verify</button>
-      </div>
-
-      <p id="rewardMessage"></p>
+    <div class="video-container">
+        <video id="bgVideo" autoplay muted loop playsinline>
+            <source src="video1.mp4" type="video/mp4">
+        </video>
     </div>
-  </section>
-  <hr class="section-divider">
-  <!---Loyalty system-->
-  <!-----Testimonials section---->
-  <section class="testimonials">
-    <h2>Our Clientele Feedback</h2>
-    <p>Check out what our customers have to say regards our services</p>
-    <div class="testimonialCards" id="testimonies">
-      <div class="testimonial-card " id="testimonial">
-        <p>"Since I began eating out from Tips Caffe, have tracked my spending and earned their loyalty program"</p>
-        <h4>Joshua Korir (Mmust Third year student)</h4>
-      </div>
+    <div class="content">
+        <div class="navbar">
+            <div class="logo">Tips Caffe</div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="navLinks">
+                <li><a href="#" aria-label="Home">Home</a></li>
+                <li><a href="menu.html" aria-label="Menu">Menu</a></li>
+                <li><a href="reward.html" aria-label="Rewards">Rewards</a></li>
+                <li><a href="about.html" aria-label="About us">About us</a></li>
+                <li><a href="contact.html" aria-label="Contact us">Contact us</a></li>
+            </ul>
+        </div>
+        <section class="homepage">
+            <h2>Delicious Meals for Bright Minds in MMUST</h2>
+            <p>Eat at affordable prices in our hotel to your fill</p>
+            <h4>We believe nutrition is the way to wellness</h4>
+            <button onclick="orderViaWhatsApp('General Inquiry', 0)" class="order">Order Now</button>
+            <button onclick="window.location.href='menu.html'" class="order">View Menu</button>
+        </section>
+        <section class="loyalty-section">
+            <h1>Unlock Your Loyalty DNA: Where Every Bite Counts!</h1>
+            <p><b>Dive into a world of rewards tailored just for you, our valued patrons! Imagine turning your daily meals into exciting perks that keep you coming back for more. With Loyalty DNA, every visit is a step closer to delicious freebies and exclusive offers. Join the adventure and let your dining habits unlock a treasure trove of benefits!</b></p>
+            <div class="stamp-card">
+                <h2>🎯 Eat & Earn: Fuel Your Loyalty Journey!</h2>
+                <p>Picture this: Log your scrumptious meals every day and watch as you rack up stamps toward a FREE meal after just 7 visits! It's not just eating—it's an exhilarating race to rewards that make your taste buds and wallet happy. Start today and feel the thrill of progress with each bite!</p>
+                <div class="stamps">
+                    <div class="stamp" id="stamp1"></div>
+                    <div class="stamp" id="stamp2"></div>
+                    <div class="stamp" id="stamp3"></div>
+                    <div class="stamp" id="stamp4"></div>
+                    <div class="stamp" id="stamp5"></div>
+                    <div class="stamp" id="stamp6"></div>
+                    <div class="stamp" id="stamp7"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <button onclick="showCodeEntry()">I Devoured a Meal Today – Log It!</button>
+                <div id="codeEntry" style="display:none;">
+                    <input type="text" id="dailyCode" placeholder="Enter today's secret code for your stamp!" aria-label="Enter daily code">
+                    <button onclick="verifyCode()">Claim Your Stamp!</button>
+                </div>
+                <p id="rewardMessage"></p>
+            </div>
+        </section>
+        
+        <section class="foodie">
+            <div id="foodFact">
+                <h2>🥦 Did You Know?</h2>
+                <p id="factText">Loading food wisdom...</p>
+                <div class="buttons">
+                    <button onclick="showPreviousFact()" class="prev">⏪ Previous Tip</button>
+                    <button onclick="showRandomFact()" class="randomFact">🎲 Surprise Me</button>
+                    <button onclick="shareOnWhatsApp()" class="share">📤 Share on WhatsApp</button>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <h4 class="menubars">
+                <a href="contact.html">Contacts</a> || 
+                <a href="menu.html">Our Menu</a> || 
+                <a href="index.html">Home</a> || 
+                <a href="reward.html">Rewards</a>
+            </h4>
+            <p>&copy; Built with precision & Industrial Chemistry Hygiene standards</p>
+        </section>
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-content">
+                <h3>Your Cart</h3>
+                <ul id="cartItems"></ul>
+                <p>Total: KES <span id="cartTotal">0</span></p>
+                <button onclick="orderCartViaWhatsApp()">Order via WhatsApp</button>
+                <button onclick="closeCart()">Close</button>
+            </div>
+        </div>
     </div>
-  </section>
-  <!------Did you know section-->
-  <div class="foodie">
-  <section id="foodFact">
-    <h2>🥦 Did You Know?</h2>
-    <p id="factText">Loading food wisdom...</p>
-    <div class="buttons">
-      <button onclick="showPreviousFact()" class="prev">⏪ Previous Tip</button>
-      <button onclick="showRandomFact()" class="randomFact">🎲 Surprise Me</button>
-      <button onclick="shareOnWhatsApp()" class="share">📤 Share on WhatsApp</button>
-    </div>
-  </section>
-  </div>
-<!----Did you know section-->
-  <!-------Footer information----->
-  <section class="footer">
-    <h4 class="menubars"><a href="contact.html">Contacts</a> || <a href="menu.html">Our Menu</a> || <a
-        href="index.html">Home</a> || <a href="reward.html">Rewards</a></h4>
-    <p>&copy; Built with precision & Industrial Chemistry Hygiene standards</p>
-    <!--------Footer information----->
-  </section>
-</div>
-<script src="script.js"></script>
-<script src="loyal.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
